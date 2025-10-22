@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:luumil_app_comer/widgets/custom_text_field.dart';
-import 'package:luumil_app_comer/widgets/cameraButton.dart'; // asegúrate de crear e importar este archivo
 
-class RegisterForm extends StatelessWidget {
-  const RegisterForm({super.key});
+class LoginForm extends StatelessWidget {
+  const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.70,
+        height: MediaQuery.of(context).size.height * 0.55,
         width: double.infinity,
         decoration: const BoxDecoration(
           color: Colors.white,
@@ -25,34 +24,19 @@ class RegisterForm extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 12),
-                const CustomTextField(hint: 'Nombre', icon: Icons.person),
-                const SizedBox(height: 14),
+
                 const CustomTextField(
                   hint: 'Correo electrónico',
                   icon: Icons.email,
                 ),
-                const SizedBox(height: 14),
+                const SizedBox(height: 20),
                 const CustomTextField(
                   hint: 'Contraseña',
                   icon: Icons.lock,
                   obscure: true,
                 ),
-                const SizedBox(height: 14),
-                const CustomTextField(
-                  hint: 'Comunidad',
-                  icon: Icons.location_on,
-                ),
-                const SizedBox(height: 20),
 
-                // 🔹 Sección para subir imágenes
-                const Text(
-                  'Por favor, adjunte mínimo 3 imágenes que evidencien la existencia de sus ventas',
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 10),
-                const CameraButton(), // Botón para abrir cámara
-                const SizedBox(height: 20),
+                const SizedBox(height: 2),
 
                 Align(
                   alignment: Alignment.centerRight,
@@ -65,7 +49,7 @@ class RegisterForm extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 6),
+                const SizedBox(height: 30),
 
                 // Botón principal
                 SizedBox(
@@ -80,7 +64,7 @@ class RegisterForm extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      'Registrarse',
+                      'Iniciar Sesión',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -90,7 +74,7 @@ class RegisterForm extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 18),
 
                 // Botón Google
                 SizedBox(
@@ -133,7 +117,7 @@ class RegisterForm extends StatelessWidget {
                         // Aquí navegas al login
                       },
                       child: const Text(
-                        'inicie sesión',
+                        'Registrese',
                         style: TextStyle(
                           color: Color(0xFF007BFF),
                           fontWeight: FontWeight.bold,
