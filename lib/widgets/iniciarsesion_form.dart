@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luumil_app_comer/screens/pantainicio_screen.dart';
 import 'package:luumil_app_comer/widgets/custom_text_field.dart';
 
 class LoginForm extends StatelessWidget {
@@ -56,7 +57,14 @@ class LoginForm extends StatelessWidget {
                   width: double.infinity,
                   height: 48,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PantallaInicio(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF007BFF),
                       shape: RoundedRectangleBorder(
