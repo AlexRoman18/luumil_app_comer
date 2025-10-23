@@ -29,19 +29,13 @@ class LoginScreen extends StatelessWidget {
           SafeArea(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 400),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      SizedBox(height: 24),
-                      LoginHeader(),
-                      SizedBox(height: 20),
-                      LoginForm(),
-                    ],
-                  ),
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const LoginHeader(),
+                  const SizedBox(height: 40),
+                  const LoginForm(),
+                ],
               ),
             ),
           ),
