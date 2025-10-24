@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:luumil_app_comer/widgets/activiy_item.dart';
+import 'package:luumil_app_comer/widgets/activity_item.dart';
+
 
 
 class ActivityList extends StatelessWidget {

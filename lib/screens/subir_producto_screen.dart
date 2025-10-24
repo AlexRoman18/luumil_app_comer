@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NuevoProductoPage extends StatefulWidget {
-  const NuevoProductoPage({Key? key}) : super(key: key);
+  const NuevoProductoPage({super.key});
 
   @override
   State<NuevoProductoPage> createState() => _NuevoProductoPageState();
@@ -23,7 +23,7 @@ class _NuevoProductoPageState extends State<NuevoProductoPage> {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
     InputDecoration fieldDecoration(String hint) {
       return InputDecoration(
@@ -94,7 +94,7 @@ class _NuevoProductoPageState extends State<NuevoProductoPage> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -165,7 +165,7 @@ class _NuevoProductoPageState extends State<NuevoProductoPage> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    if (_formKey.currentState?.validate() ?? false) {
+                    if (formKey.currentState?.validate() ?? false) {
                       // TODO: lógica para guardar y subir el producto
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Guardando producto...')),

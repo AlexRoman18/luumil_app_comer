@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luumil_app_comer/screens/perfil_screen.dart';
 import 'package:luumil_app_comer/screens/subir_producto_screen.dart';
 
 
@@ -27,6 +28,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
       // Aquí puedes agregar navegación a la pantalla principal
       // Ejemplo: Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
     } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const ProfileScreen()),
+      );
       // Aquí puedes agregar navegación al perfil
       // Ejemplo: Navigator.push(context, MaterialPageRoute(builder: (context) => const PerfilPage()));
     }
