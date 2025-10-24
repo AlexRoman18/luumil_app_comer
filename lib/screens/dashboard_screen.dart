@@ -17,8 +17,6 @@ class DashboardScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
         actions: const [
-          Icon(Icons.person_outline, color: Colors.black),
-          SizedBox(width: 8),
           Icon(Icons.notifications_none, color: Colors.black),
           SizedBox(width: 16),
         ],

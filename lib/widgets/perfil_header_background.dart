@@ -33,7 +33,10 @@ class PerfilHeaderBackground extends StatelessWidget {
         // 🔙 Botón de retroceso
         SafeArea(
           child: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
             onPressed: () => Navigator.pop(context),
           ),
         ),

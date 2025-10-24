@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
           // Fondo con imagen
           Image.asset('assets/icons/interfaz.png', fit: BoxFit.cover),
 
-          // Degradado para mejorar contraste
+          // Degradado para contraste
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -25,18 +25,24 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
 
-          // Contenido principal
+          // Cabecera centrada
           SafeArea(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const LoginHeader(),
-                  const SizedBox(height: 40),
-                  const LoginForm(),
-                ],
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 60),
+                child: const LoginHeader(),
               ),
+            ),
+          ),
+
+          // Panel blanco redondeado pegado abajo
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: LoginForm(
+              heightFactor: 0.55, // Puedes ajustar a gusto
             ),
           ),
         ],

@@ -8,17 +8,17 @@ class LoginHeader extends StatelessWidget {
     return Align(
       alignment: Alignment.topCenter,
       child: Padding(
-        padding: const EdgeInsets.only(top: 24.0),
+        padding: const EdgeInsets.only(top: 15.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/icons/logo.png', width: 250, height: 250),
-            const SizedBox(height: 5),
+            Image.asset('assets/icons/logo.png', width: 225, height: 225),
+            const SizedBox(height: 0),
             const Text(
               ' Inicio de sesión',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 40,
+                fontSize: 35,
                 fontWeight: FontWeight.bold,
               ),
             ),

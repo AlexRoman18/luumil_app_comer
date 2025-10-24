@@ -41,7 +41,7 @@ class _NuevoProductoPageState extends State<NuevoProductoPage> {
     Widget photoCard() {
       return GestureDetector(
         onTap: () {
-          // TODO: añadir lógica para seleccionar/subir fotos
+         
         },
         child: Container(
           width: double.infinity,
@@ -66,7 +66,7 @@ class _NuevoProductoPageState extends State<NuevoProductoPage> {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: subir fotos
+                 
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,

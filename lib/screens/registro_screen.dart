@@ -11,38 +11,29 @@ class RegisterScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Fondo con imagen
+          // Fondo
           Image.asset('assets/icons/interfaz.png', fit: BoxFit.cover),
 
-          // Capa semitransparente para contraste
-          Container(color: Colors.black.withOpacity(0.25)),
-
-          // Contenido principal
-          SafeArea(
-            child: Center(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 32,
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    SizedBox(height: 16),
-
-                    // Encabezado (logo y título)
-                    RegisterHeader(),
-                    SizedBox(height: 32),
-
-                    // Formulario de registro
-                    RegisterForm(),
-
-                    SizedBox(height: 24),
-                  ],
-                ),
+          // Degradado
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.black45, Colors.transparent],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
               ),
             ),
+          ),
+
+          // Header (logo + título)
+          const RegisterHeader(),
+
+          // Panel blanco (sube un poco menos para no tapar)
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: const RegisterForm(heightFactor: 0.70),
           ),
         ],
       ),
