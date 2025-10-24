@@ -80,7 +80,7 @@ class RegisterForm extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      'Registrarse',
+                      'Enviar solicitud',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
