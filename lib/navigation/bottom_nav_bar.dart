@@ -32,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         context,
         MaterialPageRoute(builder: (context) => const ProfileScreen()),
       );
-      // Aquí puedes agregar navegación al perfil
+      // Aquí puedes agregar navegación al perfilJ
       // Ejemplo: Navigator.push(context, MaterialPageRoute(builder: (context) => const PerfilPage()));
     }
   }
